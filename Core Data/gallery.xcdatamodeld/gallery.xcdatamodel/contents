@@ -7,7 +7,9 @@
         <attribute name="artist" optional="YES" attributeType="String"/>
         <attribute name="artwork_type_title" optional="YES" attributeType="String"/>
         <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="classification_title" optional="YES" attributeType="String"/>
         <attribute name="credit_line" optional="YES" attributeType="String"/>
+        <attribute name="date_display" optional="YES" attributeType="String"/>
         <attribute name="dimensions" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="imageURL" optional="YES" attributeType="String"/>

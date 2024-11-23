@@ -2,22 +2,25 @@ import SwiftUI
 
 struct ContentView: View {
     let persistenceController: PersistenceController
-    
+
+    // Initialize with persistence controller for managing saved data
     init(persistenceController: PersistenceController) {
         self.persistenceController = persistenceController
     }
-    
+
     var body: some View {
         NavigationStack {
             VStack {
                 Spacer().frame(height: 40)
+
                 // App Title
                 Text("Gallery")
                     .font(.custom("PlayfairDisplay-Italic", size: 38))
                     .padding(.top, 50)
                     .foregroundColor(.white)
-                
+
                 Spacer().frame(height: 60)
+
                 // App Description
                 Text("Dive into a world of stunning artwork. Browse, explore, and experience the beauty of art like never before.")
                     .font(.custom("PlayfairDisplay-Italic", size: 20))
@@ -25,7 +28,7 @@ struct ContentView: View {
                     .frame(maxWidth: UIScreen.main.bounds.width - 100)
                     .padding(.top, 10)
                     .foregroundColor(.white)
-                
+
                 // Highlights Section
                 VStack(alignment: .leading, spacing: 15) {
                     Text("Curated Collections: Explore art from famous museums worldwide.")
@@ -37,9 +40,9 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .font(.custom("PlayfairDisplay-Regular", size: 20))
                 .frame(maxWidth: UIScreen.main.bounds.width - 100)
-                
+
                 Spacer().frame(height: 60)
-                
+
                 // Get Started Button
                 NavigationLink(destination: MainTabView(persistenceController: persistenceController)
                     .navigationBarBackButtonHidden(true)
@@ -54,18 +57,19 @@ struct ContentView: View {
                         .padding(.horizontal, 20)
                 }
                 .padding(.bottom, 50)
-            }
+            } // end of VStack
             .background(
+                // Background image for the screen
                 Image("background")
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     .ignoresSafeArea()
             )
-        }
-    }
-}
+        } // end of NavigationStack
+    } // end of body
+} // end of ContentView
 
 #Preview {
-    
+    // Preview for ContentView
 }

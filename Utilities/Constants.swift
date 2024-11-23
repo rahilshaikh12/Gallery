@@ -1,10 +1,3 @@
-//
-//  Constants.swift
-//  gallery
-//
-//  Created by Rahil Shaikh on 21/11/24.
-//
-
 
 import Foundation
 
